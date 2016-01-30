@@ -3,6 +3,48 @@
 
 This README outlines the details of collaborating on this Ember addon.
 
+## Example
+
+### Simple example
+```
+{{#catalog-table content=model}}
+  {{#catalog-head}}
+  <tr>
+    <th>Item</th>
+  </tr>
+  {{/catalog-head}}
+
+  {{#catalog-body}}
+  <tr>
+    <td>{{item}}</td>
+  </tr>
+  {{/catalog-body}}
+{{/catalog-table}}
+```
+
+### Advanced example
+```
+{{#catalog-table content=model tagName='div'}}
+  {{catalog-filter filter=someFilter properties=['item']}}
+
+  {{#catalog-head sort=true onChange=sortedItemDidChange(property, direction)}}
+  <tr>
+    <th {{action 'sort' 'item'}}>Item</th>
+  </tr>
+  {{/catalog-head}}
+
+  {{#catalog-body}}
+  <tr>
+    <td {{action 'selectItem' item}}>{{item}}</td>
+  </tr>
+  {{/catalog-body}}
+  
+  {{catalog-pages-select onChange=numberOfRecordsChanged(number)}}
+  {{catalog-page-numbers onChange=selectedPageHasChanged(page)}}
+{{/catalog-table}}
+```
+
+
 ## Installation
 
 * `npm install ember-cli-catalog`

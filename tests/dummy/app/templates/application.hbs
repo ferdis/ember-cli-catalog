@@ -1,3 +1,23 @@
 <h2 id="title">Welcome to Ember</h2>
 
+{{#catalog-table content=items}}
+  {{catalog-filter}}
+
+  {{#catalog-head}}
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+    </tr>
+  {{/catalog-head}}
+
+  {{#catalog-body}}
+    <tr>
+      <td>{{item}}</td>
+      <td>{{price}}</td>
+    </tr>
+  {{/catalog-body}}
+
+  {{catalog-pages-select items=selection}}
+  {{catalog-page-numbers items=pages}}
+{{/catalog-table}}
 {{outlet}}

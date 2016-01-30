@@ -1,1 +1,6 @@
 {{yield}}
+<select name="catalog-pages-select" {{action 'recordsPerPageChanged' on='change'}}>
+{{#each items as |item|}}
+  <option value="{{item}}">{{item}}</option>
+{{/each}}
+</select>
