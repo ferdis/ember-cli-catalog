@@ -27,7 +27,7 @@ export default Ember.Component.extend({
      * Set records per page
      * @event recordPerPageChanged
      */
-    recordsPerPageChanged(records) {
+    recordsPerPageChanged() {
       // Ember >= 1.13.x compat
       const selectedValue = this.$('select[name="catalog-pages-select"]').val();
 
