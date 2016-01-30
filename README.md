@@ -1,4 +1,5 @@
 # Ember-cli-catalog
+[![Build Status](https://travis-ci.org/uitgewis/ember-cli-catalog.svg?branch=master)](https://travis-ci.org/uitgewis/ember-cli-catalog)
 
 This README outlines the details of collaborating on this Ember addon.
 
